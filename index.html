@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nuri</title>
+  <link rel="icon" type="image/png"
+    href="nuri.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Space+Grotesk:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --fg: #0c0c0c;
+      --mute: #77746b;
+      --line: #dcd8cc;
+      --btn: #0c0c0c;
+      --btnfg: #f4f1ea;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+    @media (prefers-color-scheme:dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #070707;
+        --fg: #f4f1ea;
+        --mute: #8d8a80;
+        --line: #222;
+        --btn: #f4f1ea;
+        --btnfg: #070707
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #070707;
+      --fg: #f4f1ea;
+      --mute: #8d8a80;
+      --line: #222;
+      --btn: #f4f1ea;
+      --btnfg: #070707
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      overflow-x: hidden
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      font-weight: 600;
+      font-size: 20px
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--btn);
+      color: var(--btnfg);
+      text-decoration: none;
+      padding: 13px 26px;
+      border-radius: 99px;
+      font-weight: 500;
+      font-size: 15px
+    }
+
+    nav .btn {
+      padding: 9px 18px;
+      font-size: 14px
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 0 70px
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(72px, 18vw, 200px);
+      line-height: 1;
+      letter-spacing: -.03em
+    }
+
+    .hero p {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--mute);
+      margin: 8px 0 28px
+    }
+
+    .ufo {
+      display: block;
+      width: min(420px, 78vw);
+      margin: 48px auto 0;
+      animation: fly 4.5s ease-in-out infinite;
+      filter: drop-shadow(0 40px 30px rgba(0, 0, 0, .25))
+    }
+
+    @keyframes fly {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-2deg)
+      }
+
+      50% {
+        transform: translateY(-16px) rotate(2deg)
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .ufo {
+        animation: none
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      border-top: 1px solid var(--line)
+    }
+
+    li {
+      display: flex;
+      gap: 18px;
+      align-items: baseline;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(22px, 4.5vw, 40px);
+      letter-spacing: -.01em
+    }
+
+    li span {
+      font-size: .8em
+    }
+
+    .cta {
+      text-align: center;
+      padding: 100px 0 60px
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(40px, 9vw, 88px);
+      line-height: 1;
+      margin-bottom: 12px
+    }
+
+    .cta p {
+      color: var(--mute);
+      margin-bottom: 28px;
+      font-size: 18px
+    }
+
+    footer {
+      text-align: center;
+      color: var(--mute);
+      font-size: 13px;
+      padding: 0 0 40px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav><span>Nuri</span><a class="btn" href="mailto:parag@thevibetech.xyz?subject=Nuri%20pre-order">Get Nuri</a></nav>
+    <header class="hero">
+      <h1>Nuri</h1>
+      <p>The AI agent with a soul.</p>
+      <a class="btn" href="mailto:parag@thevibetech.xyz?subject=Nuri%20pre-order">Get Nuri &middot; $99</a>
+      <img class="ufo" alt="Nuri"
+        src="soulbuds.png">
+    </header>
+    <ul>
+      <li><span>🎸</span>Runs your music.</li>
+      <li><span>💬</span>Answers your clients.</li>
+      <li><span>🔔</span>Reminds your family.</li>
+      <li><span>💐</span>Sends the flowers.</li>
+      <li><span>🥡</span>Orders dinner.</li>
+      <li><span>🔒</span>Never snitches.</li>
+    </ul>
+    <section class="cta">
+      <h2>Nov 23.</h2>
+      <p>9,999 first editions.</p>
+      <a class="btn" href="mailto:parag@thevibetech.xyz?subject=Nuri%20pre-order">Reserve yours</a>
+    </section>
+    <footer>TheVibeTech, Inc.</footer>
+  </div>
+</body>
+
+</html>
